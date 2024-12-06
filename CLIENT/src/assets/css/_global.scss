@@ -1,0 +1,183 @@
+/********************VARIABLES********************/
+  /************************************************/
+
+  $green-E-change : #379683;
+  $my-brown :  #e4ca9e;
+  $my-red:	#710c04;
+  $my-background:#edf5e1;
+  $my-shadow:rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+
+   /********************FONT FACE********************/
+  /************************************************/
+
+@font-face {
+  font-family: "Roboto-Regular" ;
+  src: url("../fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url("../fonts/Roboto-Bold.ttf");
+}
+
+@font-face {
+  font-family:"Lexend-Regular" ;
+  src: url("../fonts/Lexend-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Lexend-Black";
+  src: url("../fonts/Lexend-Black.ttf");
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+html {
+  height: 100%;
+  font-size: 62.5%;
+  font-family: "Roboto-Regular";
+}
+
+body {
+  display:flex;
+  margin:0;
+  flex-direction: column;
+  min-height: 100vh;
+  font-size:1.6rem;
+  line-height: 1.6em;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+#contain-global {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 100%;
+  font-family: "Roboto-Regular";
+  font-size: 1.6rem;
+  background-color: $my-background;
+ 
+}
+
+
+h1 {
+  font-family:"Lexend-Regular" ;
+  font-size: 2rem;
+  text-align: center;
+  margin: 35px;
+  
+}
+
+h2 {
+  font-family: "Lexend-Regular";
+  font-size: 1.8rem;
+  padding: 15px;
+
+}
+
+h3 {
+  font-family: "Roboto-Bold";
+  font-size: 1.6rem;
+  margin: 20px;
+
+}
+
+
+
+
+
+ /* @media (min-width:1024px) {
+
+
+h1 {
+  font-family:"Lexend-Black" ;
+  font-size: 3rem;
+  text-align: center;
+  margin: 25px;
+  
+}
+
+h2 {
+  font-family: "Lexend-Black";
+  font-size: 2.5rem;
+  padding: 15px;
+
+}
+
+h3 {
+  font-family: "Roboto-Bold";
+  font-size: 2rem;
+  margin: 10px;
+}
+
+.section-presentation {
+  article {
+   display:flex;
+   flex-direction: row;
+   margin:25px;
+
+   img {
+      display: block;
+       width: 300px;
+   }
+
+   p {
+       margin:25px;
+   }
+  }
+}
+
+.section-iframe {
+   text-align: center;
+   margin-bottom: 60px;
+
+   h2 {
+       margin-bottom:50px;
+   }
+
+}
+
+.section-blog {
+   img {
+       width: 500px;
+       height: 280px;
+       border-radius: 10px;
+   }
+
+   article {
+       //background-color: #379683;
+       //color:white;
+       h3 {
+           text-align: center;
+       }
+       div {
+           display: flex;
+           flex-direction: column;
+       }
+       display: flex;
+       align-items: center;
+       margin :30px;
+       padding: 10px;
+       border-radius: 20px;
+       box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+   }
+  article:nth-child(odd) {
+       flex-direction: row-reverse;
+   }
+
+   p {
+       margin:15px;
+       line-height: 25px;
+   }
+
+}
+
+  }*/

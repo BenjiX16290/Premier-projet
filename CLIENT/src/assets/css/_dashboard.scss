@@ -1,0 +1,127 @@
+#link-dashboard {
+    display: flex;
+    justify-content: center;
+    gap:15px;
+    background-color: #379683;
+    padding: 15px;
+    border:1px solid white;
+
+    a {
+        text-decoration: none;
+        font-family: "Lexend-Black";
+        color: white;
+        cursor:pointer;
+        text-transform: uppercase;
+    }
+    
+}
+
+.section-dashboard {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-family: "Roboto-Regular";
+    width: 100%;
+    article {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+    table-layout: fixed;
+  
+    
+}
+
+table th,
+table td {
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+    text-align: left;
+    overflow: hidden;
+}
+
+table th {
+    background-color: $my-brown;
+}
+
+table th, 
+table td {
+    transition: background-color 1s ease-in-out;
+}
+
+table th:hover, 
+table td:hover {
+    background-color: #379683;
+}
+
+
+table tbody tr:nth-child(even) {
+    background-color: $my-brown;
+}
+
+
+.contain-btn {
+    display:flex;
+    
+    .btn-update {
+        width: 80px;
+        border:none;
+        color: black;
+        background: none;
+        font-size: 2.5rem;
+        cursor: pointer;
+    }
+
+    .btn-delete {
+        border: none;
+        width: 80px;
+        font-size: 2.5rem;
+        background: none;
+        color:$my-red;
+        cursor: pointer;
+
+    }
+}
+
+.categorie {
+    display: flex;
+}
+#btn-add-category-open {
+    padding: 5px;
+    background-color: $green-E-change;
+    
+}
+.form-add-category {
+display: flex;
+
+
+input {
+    width: 200px;
+    height:auto ;
+    background-color: $my-brown;
+}
+
+div {
+    display: flex;
+    .add-update {
+    background-color: $green-E-change;
+    padding: 5px;
+    }
+    #close-category {
+    background-color: $my-red;
+    padding: 5px;
+    }
+}
+
+}
