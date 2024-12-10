@@ -1,0 +1,100 @@
+.section-details-category {
+    margin: 5px 5px;
+  
+    h2 {
+      text-align: center;
+      padding-top: 15px;
+    }
+  
+    article {
+      margin-bottom: 25px;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  
+      .contain-content-img {
+        padding: 10px;
+      }
+  
+      &:nth-child(odd) .contain-content-img {
+        flex-direction: row-reverse;
+      }
+  
+      img {
+        width: 100%;     
+        max-width: 600px;     
+        max-height: 500px;        
+        object-fit: fill;   
+        border-radius: 20px;
+        padding: 5px;
+      }
+    }
+  
+    button {
+      font-family: "Roboto-Bold";
+      background-color: $my-brown;
+      color: black 1px solid;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+  
+    button:focus-visible {
+      background-color: white;
+    }
+  }
+  
+  .form-comment {
+    textarea {
+      width: 100%;
+      font-size: 1.6rem;
+      margin-top: 10px;
+      background-color: $my-brown;
+      border: none;
+    }
+  
+    button {
+      padding: 5px;
+    }
+  }
+  
+  aside {
+    position: relative;
+  }
+  
+  #btn-add-com {
+    background-color: $my-brown;
+    color: black;
+    margin-top: 5px;
+    position: absolute;
+    left: 140px;
+    top: 0;
+    font-size: 1.6rem;
+    padding: 5px;
+  }
+  
+  #btn-add-com:focus-visible {
+    background-color: white;
+  }
+  
+  #btn-display-comment {
+    background-color: $my-brown;
+    color: black;
+    margin-top: 5px;
+    font-size: 1.6rem;
+    padding: 5px;
+  }
+  
+  #btn-display-comment:focus-visible {
+    background-color: white;
+  }
+  
+  .comment {
+    height: auto;
+    margin-top: 15px;
+  
+    .border-comment {
+      border-bottom: 1px solid white;
+      padding: 5px;
+    }
+  }
+  

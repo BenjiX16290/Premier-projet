@@ -1,9 +1,6 @@
 import Router from "express";
 import Admin from "../middlwares/Admin.js";
-
 import { getAll, getById, create, update, remove,} from "../controllers/category.js";
-
-
 
 
 const router = Router ();

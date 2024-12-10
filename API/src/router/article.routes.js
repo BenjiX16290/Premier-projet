@@ -9,7 +9,6 @@ router.get("/list", getAll);
 router.get("/list/:id", getByIdCategorie);
 router.get("/:id",getById);
 
-
 router.post("/create", Admin, create);
 router.patch("/update/:id", Admin, update);
 router.delete("/delete/:id", Admin, remove);

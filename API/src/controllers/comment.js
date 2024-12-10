@@ -1,5 +1,3 @@
-
-
 import Comment from "../model/Comment.js";
 
 const getAll = async (req, res) => {

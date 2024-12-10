@@ -1,10 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faBars,
-  faXmark,
-  faUserSecret,
-} from "@fortawesome/free-solid-svg-icons";
+import { faBars, faXmark, faPowerOff } from "@fortawesome/free-solid-svg-icons";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleMenu } from "../Store/Slices/menu";
 import { logout } from "../Store/Slices/user";
@@ -44,28 +40,37 @@ function Header() {
     <header>
       <nav>
         <img
-          src="src/assets/img/logo.png"
+          src="/img/logo.webp"
           alt="Logo du site E-change, rond avec un fond vert où il y a écrit : E-change et astuces"
           aria-hidden="true"
         />
 
         <button
           onClick={() => dispatch(toggleMenu())}
-          aria-label={menu ? "Fermer le menu" : "Ouvrir le menu"}
+          aria-label={"Bouton ouverture du menu"}
+          tabIndex="0"
         >
-          <FontAwesomeIcon icon={menu ? faXmark : faBars} />
+          <FontAwesomeIcon icon={faBars} />
         </button>
 
-        <div className="nav-menu" aria-expanded={menu}>
+        <div className="nav-menu">
           {menu && (
             <>
-              <NavLink to="/" aria-label="Aller à la page d'accueil">
+              <NavLink
+                to="/"
+                aria-label="Aller à la page d'accueil"
+                tabIndex="0"
+              >
                 Home
               </NavLink>
-              <NavLink to="/Category" aria-label="Voir les catégories">
+              <NavLink
+                to="/Category"
+                aria-label="Voir les catégories"
+                tabIndex="0"
+              >
                 Catégories
               </NavLink>
-              <NavLink to="/Contact" aria-label="Nous contacter">
+              <NavLink to="/Contact" aria-label="Nous contacter" tabIndex="0">
                 Nous contacter
               </NavLink>
 
@@ -74,6 +79,7 @@ function Header() {
                   <NavLink
                     to="/Dashboard"
                     aria-label="Accéder au tableau de bord"
+                    tabIndex="0"
                   >
                     Dashboard
                   </NavLink>
@@ -81,14 +87,16 @@ function Header() {
                     className="btn-logout"
                     onClick={onClickLogout}
                     aria-label="Se déconnecter"
+                    tabIndex="0"
                   >
-                    <FontAwesomeIcon icon={faUserSecret} />
+                    <FontAwesomeIcon icon={faPowerOff} />
                   </button>
 
                   <button
                     className="btn-close-menu"
                     onClick={() => dispatch(toggleMenu())}
-                    aria-label="Fermer le menu"
+                    aria-label="Bouton fermeture du menu"
+                    tabIndex="0"
                   >
                     Fermer
                     <FontAwesomeIcon icon={faXmark} />
@@ -99,10 +107,15 @@ function Header() {
                   <NavLink
                     to="/Login"
                     aria-label="Se connecter ou supprimer un compte"
+                    tabIndex="0"
                   >
                     Connexion-Supression
                   </NavLink>
-                  <NavLink to="/Register" aria-label="Créer un compte">
+                  <NavLink
+                    to="/Register"
+                    aria-label="Créer un compte"
+                    tabIndex="0"
+                  >
                     Créer un compte
                   </NavLink>
 
@@ -110,6 +123,7 @@ function Header() {
                     className="btn-close-menu"
                     onClick={() => dispatch(toggleMenu())}
                     aria-label="Fermer le menu"
+                    tabIndex="0"
                   >
                     Fermer
                     <FontAwesomeIcon icon={faXmark} />

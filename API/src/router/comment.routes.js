@@ -6,6 +6,7 @@ import WithAuth from "../middlwares/WithAuth.js";
 const router = Router();
 
 router.get("/list", getAll );
+
 router.post("/create/:article_id", WithAuth, addComment);
 router.get("/all-from-article/:id", getAllByArticleId); 
 router.delete("/delete/:id",Admin, remove);

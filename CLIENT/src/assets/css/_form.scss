@@ -1,59 +1,60 @@
- /********************FORMULAIRE********************/
-  /*************************************************/
 
-  .section-form {
-    width: 100%;
-    min-height: 100vh;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    gap:25px;
-    background-size: cover;
-    
-    }
-    
+.section-form {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  background-size: cover;
+}
 
-  @mixin form_styles($width: 400px, $height: 200px, $gap:5px, $input-width:300px, $input-height:30px,) {
-    font-family: "Lexend-Regular";
-    position: relative;
-    border-radius: 35px;
-    font-size: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: $gap;
-    width: $width;
-    height: $height;
-    margin-top: 50px;
-    box-shadow:$my-shadow;
-    background-color:$my-brown;
-   
-    
+@mixin form_styles($width: 400px, $height: 200px, $gap: 5px, $input-width: 300px, $input-height: 30px) {
+  font-family: "Lexend-Regular";
+  position: relative;
+  border-radius: 35px;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: $gap;
+  width: $width;
+  height: $height;
+  margin-top: 50px;
+  box-shadow: $my-shadow;
+  background-color: $my-brown;
 
-    input {
-      width: $input-width;
-      height: $input-height; 
-      border-radius: 10px;
-      padding: 5px;
-      border:1px solid grey;
-    }
-
-    button {
-      border :1px solid;
-      border-radius: 10px;
-      padding: 5px;
-      font-family: "Lexend-Regular";
-    }
-
-    button:hover {
-      cursor:pointer;
-    }
-
+  input {
+    width: $input-width;
+    height: $input-height;
+    border-radius: 10px;
+    padding: 5px;
+    border: 1px solid grey;
   }
 
-  #form-register {
-  @include form_styles ($input-width:90%);
+  input:focus {
+    border: 3px solid black;
+  }
+
+  button {
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 5px;
+    font-family: "Lexend-Regular";
+  }
+
+  button:hover {
+    cursor: pointer;
+  }
+
+  button:focus-visible {
+    background-color: white;
+  }
+}
+
+#form-register {
+  @include form_styles($input-width: 90%);
   height: 45vh;
   width: 95%;
   padding-bottom: 20px;
@@ -65,34 +66,35 @@
     margin-top: 5px;
     width: 100px;
     border-radius: 10px;
-    background-color: #7ED956;
+    background-color: $green-E-change;
     color: black;
   }
-  }
-  #form-login {
-    @include form_styles($input-width:90%);
-    height: 40vh;
-    width: 95%;
-    .contain-btn {
-      display: flex;
-      gap: 20px;
-      
-      button {
-        background-color: $green-E-change;
-        margin-top: 10px;
-      }
-    }
-  }
-  
-  .btn-delete {
-    background-color: $my-red;
-    color: white;
-    margin-top: 10px;
-  }
+}
+
+#form-login {
+  @include form_styles($input-width: 90%);
+  height: 40vh;
+  width: 95%;
   
 
-  .form-contact {
-  @include form_styles ($input-width:70%);
+  .contain-btn {
+    display: flex;
+    gap: 20px;
+
+    button {
+      background-color: $green-E-change;
+      margin-top: 10px;
+    }
+  }
+}
+
+.btn-delete {
+  background-color: $my-red;
+  color: white;
+}
+
+.form-contact {
+  @include form_styles($input-width: 70%);
   height: 70vh;
   width: 95%;
 
@@ -101,49 +103,48 @@
     margin-bottom: 10px;
   }
 
- textarea {
+  textarea {
     width: 80%;
     height: 300px;
   }
+
+  textarea:focus {
+    border: 3px solid black;
+  }
+
   position: relative;
   .charactere-count {
     position: absolute;
     bottom: 10%;
-    right:12%;
+    right: 12%;
     color: #888;
   }
-  }
+}
 
-
-  .form-create-article { 
-  @include form_styles ($input-width:90%);
-  height: 70vh;
+.form-create-article {
+  @include form_styles($input-width: 90%);
+  height: 90vh;
   width: 95%;
-  
+
   textarea {
-  width: 95%;
+    width: 95%;
   }
+
   button {
     background-color: $green-E-change;
     margin-bottom: 10px;
   }
-    
-  }
+}
 
-  .error-msg {
-    text-align: center;
-    color : $my-red;
-    font-size: 1.5rem;
+.error-msg {
+  text-align: left;
+  color: $my-red;
+  font-size: 1.5rem;
+  white-space: pre-line;
+}
 
-   }
-
-   .confirmation-message {
-    text-align: center;
-    color: black;
-    font-size: 1.5rem;
-    
-   }
-
-  
-
- 
+.confirmation-message {
+  text-align: left;
+  color: black;
+  font-size: 1.5rem;
+}

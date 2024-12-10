@@ -1,21 +1,22 @@
 footer {
     text-align: center;
-    background-color:#e4ca9e;
+    background-color: #e4ca9e;
     padding-top: 25px;
     margin-top: auto;
-}
-
-.contain-icone {
+  }
+  
+  .contain-icone {
     display: flex;
     justify-content: center;
-    gap:25px;
+    gap: 25px;
+  
     svg.fa-facebook,
     svg.fa-twitter,
     svg.fa-instagram {
-  width: 30px;
-  height: 30px;
-  color:black;
-  cursor: pointer;
-   }
-    
-}
+      width: 30px;
+      height: 30px;
+      color: black;
+      cursor: pointer;
+    }
+  }
+  

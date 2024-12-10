@@ -31,7 +31,9 @@ class Comment {
                     user.username 
                 FROM comment
                 JOIN user ON comment.user_id = user.id
-                WHERE comment.article_id = ?`;
+                WHERE comment.article_id = ?
+                ORDER BY comment.publish_date DESC`;
+                
             return await pool.execute(SELECT_ALL, [id]);
         }
         

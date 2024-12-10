@@ -7,6 +7,7 @@ import Admin from "../middlwares/Admin.js";
 const router = Router ();
 
 router.get("/list", Admin, getAll);
+
 router.post("/register", create);
 router.post("/login", login);
 router.post("/logout", WithAuth, logout);

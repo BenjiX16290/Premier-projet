@@ -1,4 +1,6 @@
 import closeMenu from "../../hook/closeMenu";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 
 function Home() {
   closeMenu();
@@ -11,7 +13,7 @@ function Home() {
         <section id="section-presentation">
           <article>
             <img
-              src="src/assets/img/mecano.png"
+              src="/img/Mecano.webp"
               alt="Image d'un bonhome caricaturale représentant un mécanicien avec une clé plate à la main droite,
                   et une boite à outil rouge dans la main gauche"
             />
@@ -59,7 +61,7 @@ function Home() {
               </p>
             </div>
             <img
-              src="src/assets/img/mecano.png"
+              src="/img/Mecano.webp"
               alt="Image d'un bonhome caricaturale représentant un mécanicien avec une clé plate à la main droite,
                   et une boite à outil rouge dans la main gauche"
             />
@@ -72,16 +74,20 @@ function Home() {
               Vidéo de petits conseils simples et efficaces, n'hésitez pas à
               aller voir leur chaîne, je vous la conseille.
             </h2>
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/0R-j3ybaL9s"
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
-            ></iframe>
+            <div>
+              <FontAwesomeIcon icon={faGlobe} />
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/0R-j3ybaL9s"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              ></iframe>
+              <FontAwesomeIcon icon={faGlobe} />
+            </div>
           </article>
         </section>
 
@@ -114,13 +120,13 @@ function Home() {
               </p>
             </div>
             <img
-              src="src/assets/img/piscine1.jpg"
+              src="/img/piscine1.webp"
               alt="Vue de mer avec des montagnes au fond. Au bord d'une piscine en hauteur"
             />
           </article>
           <article>
             <div>
-              <h3>Des personnes ont essayé et ils ont fini par réussir</h3>
+              <h3>Des personnes ont essayé et ils ont finient par réussir</h3>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est
                 itaque cum facere nesciunt quam veritatis soluta tempora quo
@@ -144,7 +150,7 @@ function Home() {
               </p>
             </div>
             <img
-              src="src/assets/img/piscine4.jpg"
+              src="/img/piscine4.webp"
               alt="Vue d'une villa avec piscine devant"
             />
           </article>
@@ -177,7 +183,7 @@ function Home() {
               </p>
             </div>
             <img
-              src="src/assets/img/piscine3.jpg"
+              src="/img/piscine3.webp"
               alt="Petit coin piscine avec terrasse en bois"
             />
           </article>

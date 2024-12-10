@@ -1,7 +1,8 @@
 import { fetchComment } from "../../fetch/comment";
 import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import { faTrash,faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 function Comment() {
   const [comments, setComments] = useState([]);
@@ -34,6 +35,13 @@ function Comment() {
   return (
     <>
       <main>
+      <Link
+          id="return-dashboard"
+          to="/dashboard"
+          aria-label="Retour à la page principal du dashboard"
+        >
+          <FontAwesomeIcon id="return-dashboard" icon={faArrowLeft} />
+        </Link>
         <section className="section-dashboard">
           <article>
             <h2>Liste des commentaires</h2>

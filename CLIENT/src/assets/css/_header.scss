@@ -1,94 +1,100 @@
-/********************HEADER********************/
-/*********************************************/
+
+a:focus {
+  background-color: $green-E-change;
+}
+
+.nav-menu a:hover,
+nav a:hover {
+  background-color: $green-E-change;
+}
+
+button:focus-visible {
+  background-color: white;
+  outline: 2px solid black;
+}
 
 header {
-   background-color : #e4ca9e;
-   position: relative;
-   padding: 15px;
-   width: 100%;
-   
-   img {
-    width: 120px;
-    height: 120px;
-    top:20px;
-    left:10px;
-   }
+  background-color: $my-brown;
+  position: relative;
+  padding: 15px;
+  width: 100%;
+}
+
+header img {
+  width: 120px;
+  height: 120px;
+  top: 20px;
+  left: 10px;
 }
 
 nav {
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   width: 100%;
-    
-   svg.fa-bars
-    {
-    width: 60px;
-    height: 60px;
-    cursor: pointer;
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
 
-  button {
-    border:none;
-    background-color:$my-brown;
-  }
-    
-    a {
-      color : black;
-      text-decoration: none;
-      margin:15px 15px;
-      padding: 10px;
-      text-transform: uppercase;
-    }
+nav svg.fa-bars {
+  width: 50px;
+  height: 60px;
+  cursor: pointer;
+}
 
-    a:hover {
-     // background-color: $green-E-change;
-     background-color: #379683;
-    }
+nav button {
+  border: none;
+  background-color: $my-brown;
+}
+
+nav a {
+  color: black;
+  text-decoration: none;
+  margin: 15px;
+  padding: 10px;
+  text-transform: uppercase;
 }
 
 .nav-menu {
-  font-family:"Lexend-Black" ;
+  font-family: "Lexend-Black";
   font-size: 2rem;
   width: 100%;
   height: auto;
   z-index: 150;
-    position: absolute;
-    right:0;
-    top:150px;
-    display: flex;
-    flex-direction: column;
-    gap:20px;
-    background-color: $my-brown;
-    border: none;
-    -webkit-box-shadow: 0px 0px 0px 5px #A0A0A0, inset 0px 10px 27px -8px #141414, inset 0px -10px 27px -8px #A31925, 5px 5px 15px 5px rgba(228,202,158,0), 5px 5px 15px 5px rgba(228,202,158,0); 
-    box-shadow: inset 0px 10px 27px -8px #141414, inset 0px -10px 27px -8px #A31925, 5px 5px 15px 5px rgba(228,202,158,0), 5px 5px 15px 5px rgba(228,202,158,0);
+  position: absolute;
+  right: 0;
+  top: 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: $my-brown;
+  border: none;
+  box-shadow: 
+    inset 0px 10px 27px -8px #141414,
+    inset 0px -10px 27px -8px #A31925,
+    5px 5px 15px 5px rgba(228, 202, 158, 0),
+    5px 5px 15px 5px rgba(228, 202, 158, 0);
 }
 
 .btn-close-menu {
   font-family: "Lexend-Black";
   display: flex;
   justify-content: flex-end;
-  gap:5px;
+  gap: 5px;
   cursor: pointer;
   color: $my-red;
   padding: 5px;
 }
 
+.btn-logout {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+  color: $my-red;
+  background-color: transparent;
+}
 
-  .btn-logout {
-    position: absolute;
-    right: 20px;
-    top:20px;
-    display: flex;
-    justify-content: flex-end;
-    cursor: pointer;
-    color: $my-red;
-    background-color: transparent;
-    
-    svg.fa-user-secret {
-     height: 30px;
-    }
-  }
-
-
+.btn-logout svg {
+  height: 30px;
+}

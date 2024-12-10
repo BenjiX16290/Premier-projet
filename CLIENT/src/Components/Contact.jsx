@@ -58,6 +58,7 @@ function Contact() {
           onChange={(e) => setName(e.target.value)}
           placeholder="Nom d'utilisateur"
           aria-label="Nom d'utilisateur"
+          required
         />
 
         <label htmlFor="email">Adresse email</label>
@@ -68,6 +69,7 @@ function Contact() {
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Votre email"
           aria-label="Adresse email"
+          required
         />
 
         <label htmlFor="message">Votre message</label>
@@ -79,6 +81,7 @@ function Contact() {
           onChange={(e) => setMessage(e.target.value)}
           maxLength={255}
           aria-label="Entrez votre message"
+          required
         ></textarea>
         <p className="charactere-count">{255 - message.length}</p>
 

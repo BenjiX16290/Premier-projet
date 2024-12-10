@@ -64,7 +64,7 @@ function AddComment({
             : "Afficher les commentaires"
         }
       >
-        {isCommentsVisible ? "Masquer les commentaires" : "Commentaires"}
+        {isCommentsVisible ? "fermer" : "Commentaires"}
       </button>
 
       {isCommentsVisible && comments && comments.length > 0 && (

@@ -1,127 +1,193 @@
-#link-dashboard {
+
+  #link-dashboard {
     display: flex;
-    justify-content: center;
-    gap:15px;
-    background-color: #379683;
-    padding: 15px;
-    border:1px solid white;
-
+    flex-direction: column;
+    background-color: $green-E-change;
+  
     a {
-        text-decoration: none;
-        font-family: "Lexend-Black";
-        color: white;
-        cursor:pointer;
-        text-transform: uppercase;
+      text-decoration: none;
+      font-family: "Lexend-Black";
+      color: white;
+      cursor: pointer;
+      text-transform: uppercase;
+      border: 2px solid black;
+      text-align: center;
     }
-    
-}
-
-.section-dashboard {
-    display:flex;
+  }
+  
+  .section-dashboard {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
     font-family: "Roboto-Regular";
     width: 100%;
+  
     article {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
     }
-}
-
-
-table {
+  }
+  
+  .img-preview {
+    max-width: 40px;
+  }
+  #return-dashboard {
+    padding:5px;
+    font-size: 30px;
+    color:$green-E-change;
+  }
+  
+  
+  table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 1rem;
     table-layout: fixed;
+    font-family: "Roboto-Bold";
   
-    
-}
-
-table th,
-table td {
-    border: 1px solid #ddd;
-    padding: 0.5rem;
-    text-align: left;
-    overflow: hidden;
-}
-
-table th {
-    background-color: $my-brown;
-}
-
-table th, 
-table td {
-    transition: background-color 1s ease-in-out;
-}
-
-table th:hover, 
-table td:hover {
-    background-color: #379683;
-}
-
-
-table tbody tr:nth-child(even) {
-    background-color: $my-brown;
-}
-
-
-.contain-btn {
-    display:flex;
-    
+    th,
+    td {
+      border: 1px solid white;
+      padding: 0.5rem;
+      text-align: left;
+      overflow: hidden;
+      transition: background-color 1s ease-in-out;
+    }
+  
+    th {
+      background-color: $my-brown;
+    }
+  
+    th:hover,
+    td:hover {
+      background-color: #379683;
+    }
+  
+    tbody tr:nth-child(even) {
+      background-color: $my-brown;
+    }
+  }
+  
+  .contain-btn {
+    display: flex;
+  
+    button:focus-visible {
+      background-color: white;
+    }
+  
     .btn-update {
-        width: 80px;
-        border:none;
-        color: black;
-        background: none;
-        font-size: 2.5rem;
-        cursor: pointer;
+      width: 80px;
+      border: none;
+      color: black;
+      background: none;
+      font-size: 2.5rem;
+      cursor: pointer;
     }
-
+  
     .btn-delete {
-        border: none;
-        width: 80px;
-        font-size: 2.5rem;
-        background: none;
-        color:$my-red;
-        cursor: pointer;
-
+      border: none;
+      width: 80px;
+      font-size: 2.5rem;
+      background: none;
+      color: $my-red;
+      cursor: pointer;
     }
-}
-
-.categorie {
+  
+    .btn-close {
+      background-color: $my-red;
+      padding: 5px;
+      color: white;
+      cursor: pointer;
+    }
+  }
+  
+  #categorie {
     display: flex;
-}
-#btn-add-category-open {
+  }
+  
+  #btn-add-category-open {
     padding: 5px;
     background-color: $green-E-change;
-    
-}
-.form-add-category {
-display: flex;
-
-
-input {
-    width: 200px;
-    height:auto ;
-    background-color: $my-brown;
-}
-
-div {
+  
+    &:focus-visible {
+      background-color: white;
+    }
+  }
+  
+  .form-add-update {
     display: flex;
-    .add-update {
-    background-color: $green-E-change;
-    padding: 5px;
+    flex-direction: column;
+    width: 100%;
+  
+    input {
+      background-color: $my-brown;
+      width: 100%;
+      height: 5vh;
     }
-    #close-category {
-    background-color: $my-red;
-    padding: 5px;
+  
+    label {
+      margin: 5px;
     }
-}
-
-}
+  
+    div {
+      display: flex;
+  
+      .add-update {
+        background-color: $green-E-change;
+        padding: 5px;
+  
+        &:focus-visible {
+          background-color: white;
+        }
+      }
+  
+      .btn-close:focus-visible {
+        background-color: white;
+      }
+    }
+  }
+  
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow: hidden;
+  
+    .btn-close {
+      background-color: $my-red;
+      padding: 5px;
+      color: white;
+      cursor: pointer;
+    }
+  }
+  
+  .modal-text p {
+    word-wrap: break-word;
+  }
+  
+  .display-modal {
+    cursor: pointer;
+  }
+  

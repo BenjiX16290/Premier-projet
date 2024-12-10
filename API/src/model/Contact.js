@@ -3,7 +3,7 @@ import pool from "../config/db.js";
 class Contact {
 
     static async findAll () {
-        const SELECT_ALL = "SELECT * FROM contact order BY id ASC"
+        const SELECT_ALL = "SELECT * FROM contact order BY id DESC"
         return await pool.query(SELECT_ALL);
     }
 

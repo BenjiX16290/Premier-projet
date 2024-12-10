@@ -42,7 +42,10 @@ function Register() {
       !/[!@#$%^&*]/.test(password)
     ) {
       setPasswordError(
-        "Le mot de passe doit contenir au moins 12 caractères, une majuscule, un chiffre et un caractère spécial."
+        `Le mot de passe doit contenir au moins 12 caractères avec :
+         - Une majuscule
+         - Un chiffre
+         - Un caractère spécial`
       );
       isValid = false;
     }

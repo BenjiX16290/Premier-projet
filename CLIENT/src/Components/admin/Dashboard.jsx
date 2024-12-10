@@ -1,206 +1,3 @@
-/*import { Link } from "react-router-dom";
-import closeMenu from "../../hook/closeMenu";
-import { fetchCategories } from "../../fetch/category.js";
-import { fetchUsers } from "../../fetch/user.js";
-import { useEffect, useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlus, faEdit, faTrash } from "@fortawesome/free-solid-svg-icons";
-import AddCategory from "./Addcategory";
-import UpdateCategory from "./UpdateCategory";
-import UpdateUser from "./UpdateUser.jsx";
-
-function Dashboard() {
-  closeMenu();
-  const [selected_category, setSelected_Category] = useState(null);
-  const [selected_user, setSelected_User] = useState(null);
-  const [categories, setCategories] = useState([]);
-  const [users, setUsers] = useState([]);
-
-  const [addCategoryOpen, setAddCategoryOpen] = useState(false);
-  const [updateCategoryOpen, setUpdateCategoryOpen] = useState(false);
-  const [updateUserOpen, setUpdateUserOpen] = useState(false);
-
-  function updateCategories() {
-    fetchCategories().then((data) => setCategories(data));
-  }
-  function updateUsers() {
-    fetchUsers().then((data) => setUsers(data));
-  }
-
-  async function onClickDeleteCategory(id) {
-    const confirmDelete = window.confirm(
-      "Êtes vous sûr de vouloir supprimer cette catégorie ?"
-    );
-    if (confirmDelete) {
-      const response = await fetch(
-        "http://localhost:9000/api/v1/category/delete/" + id,
-        {
-          method: "DELETE",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          credentials: "include",
-        }
-      );
-      if (response.ok) {
-        updateCategories();
-      }
-    }
-  }
-
-  async function onClickDeleteUser(id) {
-    const confirmDelete = window.confirm(
-      "Êtes vous sûr de vouloir supprimer cette utilisateur ?"
-    );
-    if (confirmDelete) {
-      const response = await fetch(
-        "http://localhost:9000/api/v1/user/delete/" + id,
-        {
-          method: "DELETE",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          credentials: "include",
-        }
-      );
-    }
-    if (response.ok) {
-      updateUsers();
-    }
-  }
-
-  useEffect(() => {
-    updateUsers();
-    updateCategories();
-  }, []);
-
-  return (
-    <>
-    <div id="link-dashboard">
-      <Link to="/AddUpdateArticle">Articles</Link>
-      <Link to="/Comment">Commentaires</Link>
-      <Link to="/Message">Messages</Link>
-      </div>
-
-      <main>
-        <section className="section-dashboard">
-          <article>
-            <h2>Liste des utilisateurs</h2>
-            <table>
-              <thead>
-                <tr>
-                  <th>Utilisateur</th>
-                  <th>Email</th>
-                  <th>Actions</th>
-                </tr>
-              </thead>
-              <tbody>
-                {users.map((user) => (
-                  <tr key={user.id}>
-                    <td>{user.username}</td>
-                    <td>{user.email}</td>
-                    <td className="contain-btn">
-                      <button
-                        className="btn-update"
-                        onClick={() => {
-                          setSelected_User({
-                            id: user.id,
-                            username: user.username,
-                            email: user.email,
-                          });
-                          setSelected_User(user);
-                          setUpdateUserOpen(!updateUserOpen);
-                        }}
-                      >
-                        <FontAwesomeIcon icon={faEdit} />
-                      </button>
-                      <button
-                        className="btn-delete"
-                        onClick={() => onClickDeleteUser(user.id)}
-                      >
-                        <FontAwesomeIcon icon={faTrash} />
-                      </button>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-
-            {updateUserOpen && (
-              <UpdateUser
-                user={selected_user}
-                setUpdateUserOpen={setUpdateUserOpen}
-                fetchUsers={updateUsers}
-              />
-            )}
-          </article>
-          <article className="categorie">
-            <h2>Liste des catégories</h2>
-            <table>
-              <thead>
-                <tr>
-                  <th>Nom de la catégorie</th>
-                  <th>Actions</th>
-                </tr>
-              </thead>
-              <tbody>
-                {categories.map((category) => (
-                  <tr key={category.id}>
-                    <td>{category.name}</td>
-                    <td className="contain-btn">
-                      <button
-                        className="btn-update"
-                        onClick={() => {
-                          setSelected_Category({
-                            id: category.id,
-                            name: category.name,
-                          });
-                          setUpdateCategoryOpen(!updateCategoryOpen);
-                        }}
-                      >
-                        <FontAwesomeIcon icon={faEdit} />
-                      </button>
-                      <button
-                        className="btn-delete"
-                        onClick={() => onClickDeleteCategory(category.id)}
-                      >
-                        <FontAwesomeIcon icon={faTrash} />
-                      </button>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-            <button
-              id="btn-add-category-open"
-              onClick={() => setAddCategoryOpen(!addCategoryOpen)}
-            >
-              <FontAwesomeIcon icon={faPlus} /> Catégorie
-            </button>
-          </article>
-
-          {addCategoryOpen && (
-            <AddCategory
-              setAddCategoryOpen={setAddCategoryOpen}
-              fetchCategories={fetchCategories}
-              updateCategories={updateCategories}
-            />
-          )}
-          {updateCategoryOpen && (
-            <UpdateCategory
-              category={selected_category}
-              fetchCategories={fetchCategories}
-              updateCategories={updateCategories}
-              setUpdateCategoryOpen={setUpdateCategoryOpen}
-            />
-          )}
-        </section>
-      </main>
-    </>
-  );
-}
-
-export default Dashboard;*/
 import { Link } from "react-router-dom";
 import closeMenu from "../../hook/closeMenu";
 import { fetchUsers } from "../../fetch/user.js";
@@ -279,22 +76,21 @@ function Dashboard() {
 
   return (
     <>
-      <div id="link-dashboard">
-        <Link to="/AddUpdateArticle" aria-label="Page des articles">
-          Articles
-        </Link>
-        <Link to="/Comment" aria-label="Page des commentaires">
-          Commentaires
-        </Link>
-        <Link to="/Message" aria-label="Page des messages">
-          Messages
-        </Link>
-      </div>
-
       <main>
+        <div id="link-dashboard">
+          <Link to="/AddUpdateArticle" aria-label="Page des articles">
+            Articles
+          </Link>
+          <Link to="/Comment" aria-label="Page des commentaires">
+            Commentaires
+          </Link>
+          <Link to="/Message" aria-label="Page des messages">
+            Messages
+          </Link>
+        </div>
         <section className="section-dashboard">
           <article>
-            <h2>Liste des utilisateurs</h2>
+            <h2>Liste des utilisateurs </h2>
             <table aria-label="Liste des utilisateurs">
               <thead>
                 <tr>
@@ -345,7 +141,7 @@ function Dashboard() {
             )}
           </article>
 
-          <article className="categorie">
+          <article id="categorie">
             <h2>Liste des catégories</h2>
             <table aria-label="Liste des catégories">
               <thead>

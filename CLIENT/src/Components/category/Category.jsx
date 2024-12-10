@@ -48,7 +48,7 @@ function Category() {
           </article>
           <section className="logo-brico">
             <img
-              src="src/assets/img/bricoleurClé.png"
+              src="/img/bricoleurClé.webp"
               alt="Logo représentant un bricoleur avec une clé"
               aria-label="Logo bricoleur"
             />

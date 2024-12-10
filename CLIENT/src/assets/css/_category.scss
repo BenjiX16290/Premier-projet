@@ -3,13 +3,7 @@ overflow: hidden;
 display: flex;
 align-items: center;
 justify-content: center;
-//background-image: url("../img/diy.jpg");
-//background-size: cover;
-//background-position: center;
-//background-repeat: no-repeat;
 min-height:100vh;
-width: 100vw;
-
 
 }
 
@@ -24,7 +18,7 @@ width: 100vw;
 }
 
 #contain-link-category {
-    display: flex;
+   display: flex;
    flex-direction: column;
    align-items: center;
    justify-content: center;
@@ -42,6 +36,10 @@ width: 100vw;
         background-color: $my-brown;
         border: none;
         margin:15px;
+    }
+
+    a:focus {
+        background-color: white;
     }
 }
 
@@ -75,4 +73,5 @@ border-radius: 50px;
 width: 150px;
 height: 100px;
 }
+
 

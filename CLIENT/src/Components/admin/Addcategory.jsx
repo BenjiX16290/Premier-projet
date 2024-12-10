@@ -30,7 +30,7 @@ function AddCategory({ setAddCategoryOpen, updateCategories }) {
 
   return (
     <aside aria-label="Formulaire d'ajout de catégorie">
-      <form className="form-add-category" onSubmit={submitCategory}>
+      <form className="form-add-update" onSubmit={submitCategory}>
         <label htmlFor="name" aria-label="Nom de la catégorie"></label>
         <input
           type="text"
@@ -39,8 +39,9 @@ function AddCategory({ setAddCategoryOpen, updateCategories }) {
           value={name}
           onChange={(e) => setName(e.target.value)}
           aria-required="true"
+          required
         />
-        <div>
+        <div className="contain-btn">
           <button
             className="add-update"
             type="submit"
@@ -49,7 +50,7 @@ function AddCategory({ setAddCategoryOpen, updateCategories }) {
             Ajouter
           </button>
           <button
-            id="close-category"
+            className="btn-close"
             onClick={() => setAddCategoryOpen(false)}
             aria-label="Fermer le formulaire d'ajout de catégorie"
           >

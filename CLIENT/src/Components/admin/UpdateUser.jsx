@@ -38,15 +38,9 @@ function UpdateUser({ user, fetchUsers, setUpdateUserOpen }) {
   }, [user]);
 
   return (
-    <aside className="modal-form">
-      <button
-        onClick={() => setUpdateUserOpen(true)}
-        aria-label="Fermer la fenêtre de mise à jour de l'utilisateur"
-      >
-        <FontAwesomeIcon icon={faClose} />
-      </button>
-      <form onSubmit={submitHandler}>
-        <label htmlFor="username">Modifier le nom d'utilisateur</label>
+    <aside>
+      <form className="form-add-update" onSubmit={submitHandler}>
+        <label htmlFor="username">Nom </label>
         <input
           type="text"
           name="username"
@@ -55,7 +49,7 @@ function UpdateUser({ user, fetchUsers, setUpdateUserOpen }) {
           onChange={(e) => setUsername(e.target.value)}
           aria-label="Nom d'utilisateur"
         />
-        <label htmlFor="email">Modifier l'email</label>
+        <label htmlFor="email">Email</label>
         <input
           type="email"
           name="email"
@@ -64,13 +58,22 @@ function UpdateUser({ user, fetchUsers, setUpdateUserOpen }) {
           onChange={(e) => setEmail(e.target.value)}
           aria-label="Email"
         />
-
-        <button
-          type="submit"
-          aria-label="Soumettre la mise à jour de l'utilisateur"
-        >
-          Modifier
-        </button>
+        <div className="contain-btn">
+          <button
+            className="add-update"
+            type="submit"
+            aria-label="Soumettre la mise à jour de l'utilisateur"
+          >
+            Modifier
+          </button>
+          <button
+            className="btn-close"
+            onClick={() => setUpdateUserOpen(false)}
+            aria-label="Fermer la fenêtre de mise à jour de l'utilisateur"
+          >
+            <FontAwesomeIcon icon={faClose} />
+          </button>
+        </div>
       </form>
     </aside>
   );

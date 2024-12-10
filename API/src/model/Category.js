@@ -16,8 +16,7 @@ class Category {
     static async findByName(name) {
         const SEARCH_NAME = "SELECT COUNT(*) AS result FROM category WHERE name = ?";
         return await pool.execute(SEARCH_NAME, [name]); 
-       // const SEARCH_NAME2 = "SELECT * FROM category WHERE name = ?";
-        //return await pool.execute(SEARCH_NAME2, [name]); 
+
     }
 
     static async create(name){

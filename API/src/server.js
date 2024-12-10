@@ -1,9 +1,9 @@
-
 import "dotenv/config";
 import express from "express";
 import path from "path";
 import cors from "cors";
 import session from "express-session";
+import compression from "compression";
 
 import { createRequire } from "module";
 const require = createRequire(import.meta.url);
@@ -14,7 +14,7 @@ import pool from "./config/db.js";
 
 const app = express();
 const PORT = process.env.PORT || process.env.LOCAL_PORT;
-
+app.use(compression());
 app.use(cors({
     origin: "http://localhost:5173",
     credentials: true,
